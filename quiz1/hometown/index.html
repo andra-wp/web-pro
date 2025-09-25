@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hometown</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="#" class="logo">Andra</a>
+            <nav class="navbar">
+                <a href="/Homepage/index.html">Homepage</a>
+                <a href="/Profile/index.html">Profile</a>
+                <a href="/Hometown/index.html">Hometown</a>
+                <a href="/LocalFood/index.html">Local Food</a>
+                <a href="/TouristPlaces/index.html">Tourist Place</a>
+            </nav>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </header>
+
+        <main class="sub-container" id="hometown">
+            <div class="hometown-showcase">
+                <div class="hometown-slider">
+                    <div class="slides-wrapper">
+                        <img src="./guillaume-marques-bnMPFPuSCI0-unsplash.jpg" class="slide"
+                            alt="Ulun Danu Temple">
+                        <img src="./pexels-maxravier-3348363.jpg" class="slide"
+                            alt="Bali Handara">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Danau_Buyan.jpg/1200px-Danau_Buyan.jpg" class="slide" alt="Buyan Lake">
+                    </div>
+
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+
+                <div class="slide-description">
+                    <h2 id="placeName"></h2>
+                    <p id="placeDesc"></p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
