@@ -13,7 +13,6 @@ document.querySelectorAll(".navbar a").forEach(link => {
     });
 });
 
-
 const gridItems = document.querySelectorAll('.grid-item');
 const modalOverlay = document.getElementById('modal-overlay');
 const modalBody = document.getElementById('modal-body');
@@ -53,5 +52,4 @@ document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && modalOverlay.classList.contains('active')) {
         closeModal();
     }
-
 });
