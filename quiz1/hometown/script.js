@@ -1,4 +1,3 @@
-// --- Hamburger Menu Logic ---
 const hamburger = document.querySelector(".hamburger");
 const navbar = document.querySelector(".navbar");
 
@@ -14,7 +13,6 @@ document.querySelectorAll(".navbar a").forEach(link => {
     });
 });
 
-// --- Image Slider Logic ---
 const slidesWrapper = document.querySelector('.slides-wrapper');
 const slides = document.querySelectorAll('.slides-wrapper .slide');
 const prevBtn = document.querySelector('.prev');
@@ -26,15 +24,15 @@ const descriptionContainer = document.querySelector('.slide-description');
 const slideData = [
     {
         name: "Ulun Danu Beratan Temple",
-        desc: "A serene temple floating on Lake Beratan, surrounded by misty mountains and lush greenery."
+        desc: "Tabanan is a regency in Bali, often called the “rice bowl of Bali” due to its extensive rice terraces. It’s known for its lush landscapes, cool mountain air, and traditional Balinese culture, offering a peaceful escape from busy tourist areas."
     },
     {
         name: "Bali Handara Gate",
-        desc: "An iconic gate framed by towering trees, offering a picturesque entrance to the Bali Handara Golf & Resort."
+        desc: "The region is home to stunning natural attractions such as serene lakes, misty mountains, and terraced fields. Visitors can enjoy fresh air, scenic views, and outdoor activities like trekking and exploring waterfalls."
     },
     {
         name: "Buyan Lake",
-        desc: "Serene highland lake in Bedugul, surrounded by lush forests and misty hills — a peaceful spot away from Bali’s crowds."
+        desc: "Tabanan preserves rich cultural heritage with temples, traditional villages, and local markets. Popular destinations include Ulun Danu Beratan Temple, Bali Handara Gate, and Buyan Lake, each offering a unique glimpse of Balinese spirituality and natural beauty."
     }
 ];
 
@@ -42,21 +40,16 @@ let currentSlide = 0;
 const totalSlides = slides.length;
 
 function showSlide(index) {
-  // Geser gambar
   slidesWrapper.style.transform = `translateX(-${index * 100}%)`;
 
-  // --- PERBAIKAN UTAMA: LOGIKA ANIMASI TEKS ---
-  // 1. Tambahkan kelas untuk memulai animasi keluar
   descriptionContainer.classList.add('is-changing');
 
-  // 2. Tunggu animasi keluar selesai, lalu ganti teks dan mulai animasi masuk
   setTimeout(() => {
     placeName.textContent = slideData[index].name;
     placeDesc.textContent = slideData[index].desc;
     
-    // 3. Hapus kelas untuk memulai animasi masuk (kembali ke state normal)
     descriptionContainer.classList.remove('is-changing');
-  }, 300); // Durasi ini harus cocok dengan durasi transisi di CSS
+  }, 300);
 }
 
 prevBtn.addEventListener('click', () => {
@@ -69,10 +62,8 @@ nextBtn.addEventListener('click', () => {
   showSlide(currentSlide);
 });
 
-// Auto-play slider
 setInterval(() => {
   nextBtn.click();
 }, 5000);
 
-// Tampilkan slide pertama saat halaman dimuat
 showSlide(currentSlide);
