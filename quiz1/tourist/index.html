@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Places in Bali</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Andra</a>
+        <nav class="navbar">
+            <a href="/Homepage/index.html">Homepage</a>
+            <a href="/Profile/index.html">Profile</a>
+            <a href="/Hometown/index.html">Hometown</a>
+            <a href="/LocalFood/index.html">Local Food</a>
+            <a href="/TouristPlaces/index.html">Tourist Place</a>
+        </nav>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <main class="sub-container" id="tourist">
+        <div class="page-header">
+            <h1>Discover the Magic of Bali</h1>
+            <p>From sacred temples to stunning natural landscapes, explore the island's most iconic destinations.</p>
+        </div>
+
+        <div class="tourist-grid">
+            <div class="grid-item tall" data-modal-target="#uluwatu">
+                <img src="https://images.pexels.com/photos/9359159/pexels-photo-9359159.jpeg" alt="Uluwatu Temple">
+                <div class="overlay">
+                    <h3>Uluwatu Temple</h3>
+                </div>
+            </div>
+            <div class="grid-item" data-modal-target="#tegallalang">
+                <img src="https://images.unsplash.com/photo-1559628233-e9eb5d83882f?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRlZ2FsYWxhbmclMjByaWNlJTIwdGVycmFjZXxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Tegallalang Rice Terraces">
+                <div class="overlay">
+                    <h3>Tegallalang Rice Terraces</h3>
+                </div>
+            </div>
+            <div class="grid-item" data-modal-target="#kelingking">
+                <img src="https://images.unsplash.com/photo-1541666282672-5f4aad922c63?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8a2VsaW5na2luZyUyMGJlYWNofGVufDB8fDB8fHww"
+                    alt="Kelingking Beach">
+                <div class="overlay">
+                    <h3>Kelingking Beach</h3>
+                </div>
+            </div>
+            <div class="grid-item tall" data-modal-target="#batur">
+                <img src="https://images.unsplash.com/photo-1604144228372-dbbe4c3698b9?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG1vdW50JTIwYmF0dXJ8ZW58MHx8MHx8fDA%3D"
+                    alt="Mount Batur">
+                <div class="overlay">
+                    <h3>Mount Batur</h3>
+                </div>
+            </div>
+            <div class="grid-item" data-modal-target="#tanahlot">
+                <img src="https://plus.unsplash.com/premium_photo-1730045160821-7db4462a3479?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGFuYWglMjBsb3R8ZW58MHx8MHx8fDA%3D"
+                    alt="Tanah Lot Temple">
+                <div class="overlay">
+                    <h3>Tanah Lot Temple</h3>
+                </div>
+            </div>
+            <div class="grid-item" data-modal-target="#gwk">
+                <img src="https://images.unsplash.com/photo-1692461424715-c21217a0b81b?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z3drfGVufDB8fDB8fHww"
+                    alt="Garuda Wisnu Kencana">
+                <div class="overlay">
+                    <h3>Garuda Wisnu Kencana</h3>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div id="modal-body">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-data">
+        <div id="uluwatu">
+            <h2 class="modal-title">Uluwatu Temple</h2>
+            <p class="modal-description">A majestic temple perched on a steep 70-meter cliff, offering spectacular
+                sunset views over the Indian Ocean. This site is also famous for its Kecak dance performance held every
+                evening.</p>
+        </div>
+        <div id="tegallalang">
+            <h2 class="modal-title">Tegallalang Rice Terraces</h2>
+            <p class="modal-description">“Stunning terraced rice fields north of Ubud, showcasing Bali’s traditional
+                irrigation system called ‘subak’. The lush, layered greenery is one of Bali’s most iconic landscapes.
+            </p>
+        </div>
+        <div id="kelingking">
+            <h2 class="modal-title">Kelingking Beach, Nusa Penida</h2>
+            <p class="modal-description">Famous for its cliff formation resembling a T-Rex, this beach offers dramatic
+                views of turquoise waters and hidden white sand below. A true paradise for adventurers and
+                photographers.</p>
+        </div>
+        <div id="batur">
+            <h2 class="modal-title">Mount Batur</h2>
+            <p class="modal-description">An active volcano popular for early morning hikes. Trekkers are rewarded with
+                magical sunrise views from its summit, overlooking Lake Batur and the surrounding mountains.</p>
+        </div>
+        <div id="tanahlot">
+            <h2 class="modal-title">Tanah Lot Temple</h2>
+            <p class="modal-description">One of Bali’s most sacred sea temples, set on a large rock formation. During
+                high tide, it appears to float in the ocean, and it becomes especially iconic at sunset.</p>
+        </div>
+        <div id="gwk">
+            <h2 class="modal-title">Garuda Wisnu Kencana</h2>
+            <p class="modal-description">A grand cultural park featuring a colossal statue of Lord Vishnu riding Garuda.
+                It is one of the tallest statues in the world and a proud icon of Bali and Indonesia.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
