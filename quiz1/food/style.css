@@ -1,13 +1,9 @@
-/* ===============================
-    RESET & VARIABEL DASAR
-=============================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Penambahan untuk Scroll Behavior */
 html {
     scroll-padding-top: var(--header-height);
     scroll-behavior: smooth;
@@ -34,9 +30,6 @@ main {
     animation: fadeInPage 1s ease-out forwards;
 }
 
-/* ===============================
-    HEADER & NAVIGASI
-=============================== */
 .header {
     width: 100%;
     height: var(--header-height);
@@ -76,20 +69,18 @@ main {
     color: var(--primary-color);
 }
 
-/* Hamburger Menu */
 .hamburger {
     display: none;
     cursor: pointer;
     z-index: 1001;
-    flex-direction: column; /* Membuat baris tersusun vertikal */
-    gap: 5px;              /* Memberi jarak antar baris */
+    flex-direction: column;
+    gap: 5px;
 }
 
 .bar {
     display: block;
     width: 25px;
     height: 3px;
-    /* margin dihapus, digantikan oleh gap di parent */
     background-color: var(--text-color);
     border-radius: 2px;
     transition: all 0.4s ease-in-out;
@@ -99,9 +90,6 @@ main {
 .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
 .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
-/* ===============================
-    HERO SECTION
-=============================== */
 .hero-section {
     display: flex;
     width: 100%;
@@ -203,9 +191,6 @@ main {
     to { transform: translateX(-50%); }
 }
 
-/* ===============================
-    MENU SECTION
-=============================== */
 .menu-section {
     padding: 4rem 2rem;
     max-width: 1100px;
@@ -272,9 +257,6 @@ main {
     color: var(--subtle-text-color);
 }
 
-/* ===============================
-    ANIMASI FADE IN
-=============================== */
 @keyframes fadeInPage {
     from {
         opacity: 0;
@@ -286,9 +268,6 @@ main {
     }
 }
 
-/* ===============================
-    RESPONSIVE DESIGN (MOBILE)
-=============================== */
 @media (max-width: 768px) {
     .header { padding: 1rem 1.5rem; }
 
@@ -298,8 +277,7 @@ main {
     .btn-contact { align-self: center; }
     .image-marquee-column { flex: none; width: 100%; height: 40vh; }
 
-    /* Navbar Mobile */
-    .hamburger { display: flex; } /* Tampilkan hamburger di mobile */
+    .hamburger { display: flex; }
     .navbar {
         position: fixed;
         top: 0;
@@ -320,4 +298,5 @@ main {
     
     .navbar.active { transform: translateX(0); }
     .navbar a { font-size: 1.8rem; }
+
 }
