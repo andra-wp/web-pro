@@ -1,4 +1,3 @@
-// --- Hamburger Menu Logic ---
 const hamburger = document.querySelector(".hamburger");
 const navbar = document.querySelector(".navbar");
 
@@ -14,7 +13,6 @@ document.querySelectorAll(".navbar a").forEach(link => {
     });
 });
 
-// --- Food Data ---
 const foodData = [
     {
         name: "Sate Lilit",
@@ -48,8 +46,6 @@ const foodData = [
     }
 ];
 
-
-// --- FUNCTION 1: Initialize Infinite Marquee ---
 const marqueeTrack = document.querySelector('.marquee-track');
 
 function initializeMarquee() {
@@ -65,8 +61,6 @@ function initializeMarquee() {
     marqueeTrack.style.width = `${totalWidth}vh`;
 }
 
-
-// --- FUNCTION 2: Initialize Food Cards ---
 const foodGrid = document.querySelector('.food-grid');
 
 function createFoodCards() {
@@ -86,6 +80,6 @@ function createFoodCards() {
     });
 }
 
-// --- Call all functions when page loads ---
 initializeMarquee();
 createFoodCards();
+
