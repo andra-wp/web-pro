@@ -1,4 +1,3 @@
-/* --- Reset & Variabel Dasar --- */
 * {
     margin: 0;
     padding: 0;
@@ -22,13 +21,11 @@ body {
     overflow-x: hidden;
 }
 
-/* --- Animasi --- */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(15px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- Header & Navigasi --- */
 .header {
     width: 100%;
     padding: 1rem 2rem;
@@ -87,8 +84,6 @@ body {
 .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
 .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
-
-/* --- Konten Utama & Kartu Profil --- */
 .sub-container {
     display: flex;
     justify-content: center;
@@ -110,9 +105,8 @@ body {
     animation: fadeIn 0.8s ease-out;
 }
 
-/* --- Area Teks Profil --- */
 .profile-text {
-    flex: 2; /* Memberi lebih banyak ruang untuk teks */
+    flex: 2;
 }
 
 .profile-text h2 {
@@ -137,7 +131,6 @@ body {
     display: inline-block;
 }
 
-/* --- Tag Keahlian (Skill Tags) --- */
 .skills-list {
     list-style: none;
     padding: 0;
@@ -156,25 +149,22 @@ body {
     font-weight: 500;
 }
 
-/* --- Area Gambar Profil --- */
 .profile-image-container {
     flex: 1;
     max-width: 280px;
-    aspect-ratio: 1 / 1;   /* biar kotak */
-    overflow: hidden;      /* potong bagian lebih */
-    border-radius: 12px;   /* pindahin ke container */
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .profile-image-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover;     /* crop foto biar pas */
+    object-fit: cover;
     display: block;
 }
 
-
-/* --- Tombol Kontak --- */
 .button-group {
     display: flex;
     gap: 1rem;
@@ -201,12 +191,10 @@ body {
 }
 
 
-/* --- DESAIN RESPONSIVE --- */
 @media (max-width: 768px) {
     .header { padding: 1rem 1.5rem; }
     .hamburger { display: block; }
 
-    /* Menu Mobile Full-Screen */
     .navbar {
         position: fixed;
         top: 0;
@@ -232,11 +220,10 @@ body {
         font-size: 1.8rem;
     }
 
-    /* Penyesuaian Konten */
     .sub-container { padding: 60px 1rem 1rem 1rem; }
     
     .card {
-        flex-direction: column-reverse; /* Gambar di atas, teks di bawah */
+        flex-direction: column-reverse;
         padding: 2rem;
         text-align: center;
     }
@@ -245,4 +232,5 @@ body {
     .profile-text h3 { margin: 1.5rem auto 1rem auto; }
     .skills-list, .button-group { justify-content: center; }
     .profile-image-container { max-width: 200px; }
+
 }
