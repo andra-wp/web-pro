@@ -1,0 +1,323 @@
+/* ===============================
+    RESET & VARIABEL DASAR
+=============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Penambahan untuk Scroll Behavior */
+html {
+    scroll-padding-top: var(--header-height);
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #f4f4f9;
+    --primary-color: #4a90e2;
+    --text-color: #333;
+    --subtle-text-color: #555;
+    --card-bg-color: #ffffff;
+    --header-height: 70px;
+}
+
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    padding-top: var(--header-height);
+}
+
+main {
+    animation: fadeInPage 1s ease-out forwards;
+}
+
+/* ===============================
+    HEADER & NAVIGASI
+=============================== */
+.header {
+    width: 100%;
+    height: var(--header-height);
+    padding: 0 2rem;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--primary-color);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+    flex-direction: column; /* Membuat baris tersusun vertikal */
+    gap: 5px;              /* Memberi jarak antar baris */
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    /* margin dihapus, digantikan oleh gap di parent */
+    background-color: var(--text-color);
+    border-radius: 2px;
+    transition: all 0.4s ease-in-out;
+}
+
+.hamburger.active .bar:nth-child(2) { opacity: 0; }
+.hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* ===============================
+    HERO SECTION
+=============================== */
+.hero-section {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+}
+
+.info-card {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    background-color: var(--card-bg-color);
+    overflow-y: auto;
+    height: 100%;
+}
+
+.info-content {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    line-height: 1.2;
+    color: var(--text-color);
+}
+
+.info-content p {
+    font-size: 1rem;
+    color: var(--subtle-text-color);
+}
+
+.info-content h3 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.tag-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.tag-item {
+    background-color: #e9ecef;
+    color: var(--subtle-text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.btn-contact {
+    display: inline-block;
+    text-decoration: none;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.btn-contact:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
+}
+
+.image-marquee-column {
+    flex: 1.2;
+    height: 100%;
+    overflow: hidden;
+}
+
+.marquee-track {
+    display: flex;
+    height: 100%;
+    animation: scroll-left 40s linear infinite;
+    align-items: center;
+    gap: 1rem;
+}
+
+.marquee-image {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+@keyframes scroll-left {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* ===============================
+    MENU SECTION
+=============================== */
+.menu-section {
+    padding: 4rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    color: var(--subtle-text-color);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.food-card {
+    background-color: var(--card-bg-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-image-container img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: var(--subtle-text-color);
+}
+
+/* ===============================
+    ANIMASI FADE IN
+=============================== */
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===============================
+    RESPONSIVE DESIGN (MOBILE)
+=============================== */
+@media (max-width: 768px) {
+    .header { padding: 1rem 1.5rem; }
+
+    .hero-section { flex-direction: column-reverse; height: auto; }
+    .info-card { flex: none; width: 100%; padding: 3rem 1.5rem; text-align: center; height: auto; }
+    .tag-list { justify-content: center; }
+    .btn-contact { align-self: center; }
+    .image-marquee-column { flex: none; width: 100%; height: 40vh; }
+
+    /* Navbar Mobile */
+    .hamburger { display: flex; } /* Tampilkan hamburger di mobile */
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(5px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in-out;
+        z-index: 999;
+    }
+    
+    .navbar.active { transform: translateX(0); }
+    .navbar a { font-size: 1.8rem; }
+}
