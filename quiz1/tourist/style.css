@@ -1,4 +1,3 @@
-/* --- Reset & Variabel Dasar --- */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +6,7 @@
 
 :root {
     --bg-color: #f0f2f5;
-    --primary-color: #20B2AA; /* LightSeaGreen, warna yang segar */
+    --primary-color: #007bff;
     --text-color: #333;
     --subtle-text-color: #555;
     --border-color: #dee2e6;
@@ -20,7 +19,6 @@ body {
     line-height: 1.7;
 }
 
-/* --- Header & Navigasi --- */
 .header {
     width: 100%; padding: 1rem 2rem; background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(10px); display: flex; justify-content: space-between;
@@ -37,7 +35,6 @@ body {
 .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
 .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
-/* --- Konten Utama & Header Halaman --- */
 .sub-container {
     padding: 80px 2rem 2rem 2rem;
     max-width: 1200px;
@@ -52,12 +49,11 @@ body {
 .page-header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
 .page-header p { font-size: 1.1rem; color: var(--subtle-text-color); }
 
-/* --- Galeri Masonry --- */
 .tourist-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-auto-rows: 250px;
-    grid-auto-flow: dense; /* Membuat grid mengisi ruang kosong */
+    grid-auto-flow: dense;
     gap: 1rem;
     animation: fadeIn 1.2s ease-out;
 }
@@ -71,7 +67,7 @@ body {
 }
 
 .grid-item.tall {
-    grid-row: span 2; /* Membuat item ini 2x lebih tinggi */
+    grid-row: span 2;
 }
 
 .grid-item img {
@@ -102,7 +98,6 @@ body {
     transform: translateY(0);
 }
 
-/* --- Modal Pop-up --- */
 .modal-overlay {
     position: fixed;
     top: 0; left: 0;
@@ -149,13 +144,12 @@ body {
     transition: color 0.3s ease;
 }
 .modal-close:hover { color: var(--text-color); }
-.modal-data { display: none; } /* Sembunyikan data asli */
+.modal-data { display: none; }
 .modal-image { width: 100%; border-radius: 8px; margin-bottom: 1.5rem; }
 .modal-title { font-size: 2rem; margin-bottom: 1rem; color: var(--primary-color); }
 .modal-description { font-size: 1.1rem; color: var(--subtle-text-color); line-height: 1.8; }
 
 
-/* --- Animasi & Responsif --- */
 @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
 
 @media (max-width: 768px) {
@@ -168,4 +162,5 @@ body {
     
     .sub-container { padding: 80px 1rem 1rem 1rem; }
     .page-header h1 { font-size: 2rem; }
+
 }
